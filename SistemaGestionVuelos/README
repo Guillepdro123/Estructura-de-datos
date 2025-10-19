@@ -1,1 +1,106 @@
+# ✈ Sistema de Gestión de Vuelos basado en Árboles AVL
 
+## 📘 Descripción del Proyecto
+Este proyecto implementa un *Sistema de Gestión de Vuelos* utilizando la estructura de datos *Árbol AVL* (Árbol Binario de Búsqueda Balanceado) en el lenguaje *Java*.  
+El objetivo principal es mantener los datos de los vuelos organizados y equilibrados, permitiendo realizar operaciones de *inserción, búsqueda, eliminación y recorrido* de manera eficiente.
+
+El sistema asegura que el árbol se *reorganice automáticamente* mediante *rotaciones* después de cada inserción o eliminación, garantizando así la *eficiencia en la búsqueda* de información.
+
+---
+
+## 🎯 Objetivos
+- Aplicar los conceptos de *árboles binarios de búsqueda balanceados (AVL)*.  
+- Desarrollar un sistema que gestione vuelos de forma ordenada y eficiente.  
+- Mantener el árbol equilibrado después de cada operación.  
+- Mostrar los recorridos *inorden, **preorden* y *postorden* del árbol.  
+
+---
+
+## ⚙ Funcionalidades
+El sistema permite al usuario:
+1. *Registrar vuelos:* número, aerolínea, origen, destino y hora.  
+2. *Buscar vuelos:* por número o por destino.  
+3. *Eliminar vuelos:* el árbol se balancea automáticamente después de la eliminación.  
+4. *Visualizar recorridos:* inorden, preorden y postorden.  
+5. *Salir del sistema.*
+
+---
+
+## 💻 Estructura del Proyecto
+El código está dividido en clases para mantener una estructura modular y ordenada:
+
+| Archivo | Descripción |
+|----------|-------------|
+| Vuelo.java | Define los atributos y métodos del objeto *Vuelo* (número, aerolínea, origen, destino, hora). |
+| NodoAVL.java | Representa cada nodo del árbol, con referencias a los hijos izquierdo y derecho, y la altura del nodo. |
+| ArbolAVL.java | Contiene la lógica principal del árbol: inserción, búsqueda, eliminación, balanceo y recorridos. |
+| SistemaGestionVuelos.java | Contiene el menú principal y permite al usuario interactuar con el sistema desde consola. |
+
+---
+
+## 🧠 Ejemplo de Demostración
+
+Durante la ejecución del programa se registran los siguientes vuelos:
+
+| Nº Vuelo | Aerolínea | Origen | Destino | Hora |
+|-----------|------------|---------|----------|------|
+| 320 | AeroSur | Pasto | Tunja | 06:40 a.m. |
+| 405 | FlyAndes | Neiva | Armenia | 08:15 a.m. |
+| 250 | SkyNova | Manizales | Montería | 09:10 a.m. |
+| 390 | AeroCaribe | Valledupar | Leticia | 10:30 a.m. |
+| 270 | LlanAir | Yopal | Popayán | 11:45 a.m. |
+| 310 | CondorJet | Quindío | Ibagué | 01:20 p.m. |
+
+Durante la ejecución:
+
+- Se realiza una *búsqueda del vuelo 390*, mostrando toda su información.  
+- Se busca por *destino “Popayán”* para ver todos los vuelos que llegan allí.  
+- Se elimina el vuelo *250, lo cual activa automáticamente el **balanceo interno del árbol AVL*.  
+- Finalmente, se muestran los *recorridos*:
+  - *Inorden:* 270, 310, 320, 390, 405  
+  - *Preorden:* muestra primero las raíces antes de los hijos.  
+  - *Postorden:* recorre primero los hijos y al final las raíces.
+
+---
+
+## 🔄 Balanceo del Árbol
+El balanceo se logra mediante *rotaciones automáticas* cuando el árbol detecta desbalance:
+- Rotación simple a la derecha  
+- Rotación simple a la izquierda  
+- Rotación doble izquierda-derecha  
+- Rotación doble derecha-izquierda  
+
+Estas rotaciones garantizan que la *altura del árbol se mantenga óptima*, mejorando el rendimiento en las operaciones de búsqueda e inserción.
+
+---
+
+## ▶ Video de Demostración
+🎥 Puedes ver la explicación completa y la ejecución del sistema en YouTube en el siguiente enlace:  
+👉 [Ver video en YouTube] https://youtu.be/A9J5-OyN4QI
+
+
+---
+
+## 👨‍💻 Autores
+Proyecto desarrollado por estudiantes de *Ingeniería de Sistemas - Uniremington Sahagún*  
+
+*Integrantes:*
+- Guillermo Sandoval   
+- Cristian Martínez  
+- Mario Alemán  
+
+---
+
+## 🧩 Tecnologías utilizadas
+- Lenguaje: *Java*  
+- Entorno de desarrollo: *NetBeans*  
+- Paradigma: *Programación Orientada a Objetos (POO)*  
+
+---
+
+## 📄 Licencia
+Este proyecto fue desarrollado con fines *académicos* para la asignatura de *Estructura de Datos*, y puede ser reutilizado con fines educativos citando la fuente original.
+
+---
+
+✈ “La organización eficiente de los datos es la clave del vuelo perfecto.”
